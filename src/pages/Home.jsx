@@ -26,6 +26,7 @@ const Home = () => {
   };
 
   useEffect(() => {
+    document.title = "Chuck Norris - Fetch API";
     fetchData();
     getRandomByCategory();
   }, []);
@@ -37,9 +38,7 @@ const Home = () => {
   return (
     <div style={styles.container}>
       <img src={currentJoke?.icon_url} />
-      <div style={styles.card}>
-        {isLoading ? "🔄" : `"${currentJoke?.value}"`}
-      </div>
+      <h3 style={styles.card}>{isLoading ? "🔄" : currentJoke?.value}</h3>
 
       <strong style={{ color: "white", transition: "300ms" }}>
         Select an category bellow or try a random joke by clicking button. 🤘
@@ -88,7 +87,7 @@ const styles = {
     fontSize: "14px",
     fontWeight: "bold",
     color: "#573bb7",
-    height: "24px",
+    height: "28px",
     padding: "0 12px",
     background: "#FFFFFF40",
     display: "flex",
@@ -105,6 +104,7 @@ const styles = {
     borderRadius: "24px",
     width: "400px",
     color: "#573bb7",
+    textAlign: "center",
   },
   button: {
     background: "#573bb7",
