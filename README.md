@@ -1,4 +1,4 @@
-<a href="https://zeucampos.github.io/chuck-norris-jokes/">app preview</a>
+<a href="https://zeucampos.github.io/chuck-norris-jokes/" target="_blank">app preview</a>
 
 Fetch data from **Chuck Norris API** and show that friendly 😉.
 
